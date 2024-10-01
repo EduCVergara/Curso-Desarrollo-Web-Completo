@@ -72,10 +72,12 @@ body {
 }
 .contenido-hero {
     position: absolute;
-    background-color: rgba(0, 0, 0, .5);
+    /* background-color: rgba(0, 0, 0, .5); Anterior */
     background-color: rgb(0 0 0 / 50%);
     bottom:0;
     left: 0;
     top: 0;
     right: 0;
+    display: flex;
+    position: relative;
 }
