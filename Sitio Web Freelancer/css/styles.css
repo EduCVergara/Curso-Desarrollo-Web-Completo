@@ -6,9 +6,10 @@
     --primario: #4a30c1;
     --secundario: #0097A7;
     --gris: #757575;
-
+    --grisClaro: #d3d3d3;
     --fuente-principal: 3rem;
 }
+/* Hack para box model */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -16,18 +17,30 @@ html {
 *, *::before,*::after {
     box-sizing: inherit;
 }
+/* Fin hack para box model */
 body {
     font-size: 16px; /* 1rem = 10px */
     font-family: "Krub", sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
 }
-.titulo {
-    text-align: center;
+/* Tipografia */
+h1 {
     font-size: 3rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1, h2, h3 {
+    text-align: center;
 }
 .subtitulo {
     text-align: center;
     font-style: italic;
 }
+/* Titulos */
 .titulo span {
     font-size: 2rem;
 }
@@ -35,6 +48,34 @@ body {
     max-width: 120rem;
     margin: 0 auto;
 }
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: auto;
+}
+
+@media (min-width: 480) {
+    .boton {
+        width: auto;
+    }
+}
+.sombra {
+    box-shadow: 0px 10px 22px -8px rgba(0,0,0,0.75);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+/* Navegacion principal */
 .nav-bg {
     background-color: var(--secundario);
 }
@@ -54,7 +95,20 @@ body {
 .navegacion-principal a:hover {
     background-color: var(--primario);
 }
-
+@media (max-width: 1350px) {
+    .navegacion-principal {
+        width: auto;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+@media (max-width: 768px) {
+    .navegacion-principal {
+        width: auto;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
 @media (max-width: 480px) {
     .navegacion-principal {
         width: auto;
@@ -62,6 +116,7 @@ body {
         align-items: center;
     }
 }
+
 .hero {
     background-image: url(../img/tecnologia.jpg);
     background-repeat: no-repeat;
@@ -69,6 +124,7 @@ body {
     height: 41rem;
     padding: 2rem;
     position: relative;
+    margin-bottom: 2rem;
 }
 .contenido-hero {
     position: absolute;
@@ -78,6 +134,15 @@ body {
     left: 0;
     top: 0;
     right: 0;
+
     display: flex;
-    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero h2, p {
+    color: var(--blanco);
+}
+.contenedor p {
+    color: var(--negro);
 }
