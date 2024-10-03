@@ -1,0 +1,86 @@
+:root {
+    --primario: #9C27B0;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233,287,2);
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuentePrincipal: "Staatliches", normal; 
+}
+/* Box Sizing - Paul Irish */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* Para que 1 rem sea igual a 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/** Globales **/
+body {
+    background-color: var(--primario);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1, h2, h3 {
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+h1 {font-size: 4rem;}
+h2 {font-size: 3.2rem;}
+h3 {font-size: 2.4rem;}
+/**** BEM ****/
+/** Header **/
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header__logo {
+    margin: 3rem 0;
+}
+/** Footer **/
+.footer {
+    background-color: var(--primarioOscuro);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__text {
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    font-size: 2.2rem;
+}
+/** Navegacion **/
+.navegacion { /* Bloque*/
+    background-color: var(--primarioOscuro);
+    padding:1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* separación de enlaces -agregado  flexbox*/
+}
+.navegacion__enlace { /* Elemento */
+    font-family: var(--fuentePrincipal);
+    color: var(--blanco);
+    font-size: 3rem;
+    transition: 0.3s;
+}
+.navegacion__enlace--activo, /* Modificador */
+.navegacion__enlace:hover {
+    color: var(--secundario);
+    text-shadow: .2rem .2rem #000;
+}

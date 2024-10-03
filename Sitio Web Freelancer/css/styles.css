@@ -120,6 +120,7 @@ h1, h2, h3 {
     font-weight: bold;
     padding: 1rem;
     border-radius: 15px;
+    transition: 0.3s;
 }
 .navegacion-principal a:hover {
     background-color: var(--primario);
