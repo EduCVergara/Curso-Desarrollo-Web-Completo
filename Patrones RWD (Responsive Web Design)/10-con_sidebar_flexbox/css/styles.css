@@ -53,12 +53,19 @@ p {
 @media (min-width: 768px) {
     .con-sidebar {
         display: flex;
+        /* se le pone space-between si utilizas un calc, si usas gap no es necesario */
         justify-content: space-between;
     }
     aside {
-        flex-basis: 1;
+        /* como factor de crecimiento */
+        flex: 1;
+        /* Vendría siendo lo mismo que: */
+        /* flex: 0 0 calc(33.3% - 1rem); */
     }
     article {
-        flex-basis: 3;
+        /* como factor de crecimiento */
+        flex: 3;
+        /* Vendría siendo lo mismo que: */
+        /* flex: 0 0 calc(66.6% - 1 rem); */
     }
 }
