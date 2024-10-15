@@ -37,3 +37,24 @@ p {
 }
 
 /** CODIGO AQUI **/
+/* Mostly Fluid indica que cada elemento fluya con el tamaño total de la pantalla donde estemos viendo nuestra web */
+.contenedor{
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .contenedor {
+        width: 90%;
+    }
+    
+}
+@media (min-width: 992px) {
+    .contenedor {
+        width: 85%;
+    }
+}
+img {
+    /* max width no sobrepasa el límite del tamaño de la imagen */
+    max-width: 100%;
+}
