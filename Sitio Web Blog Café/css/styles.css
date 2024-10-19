@@ -33,6 +33,7 @@ a {
 
 h1, h2, h3, h4 {
     font-family: var(--fuenteHeadings);
+    line-height: 1.2;
 }
 h1 {
     font-size: 4.8rem;
@@ -43,7 +44,7 @@ h2 {
 h3 {
     font-size: 3.2rem;
 }
-h2 {
+h4 {
     font-size: 2.8rem;
 }
 img {
@@ -96,9 +97,6 @@ img {
     font-weight: 700;
 }
 
-.navegacion {
-    
-}
 @media (min-width: 768px) {
     .navegacion {
         display: flex;
@@ -146,4 +144,32 @@ img {
 }
 .boton--primario {
     background-color: var(--negro);
+}.boton--secundario {
+    background-color: var(--colorPrimario);
+}
+.cursos {
+    list-style: none;
+}
+.widget-curso {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+.widget-curso:last-of-type {
+    border-bottom: none;
+    margin-bottom: none;
+}
+.widget-curso__label {
+    font-family: var(--fuenteHeadings);
+    font-weight: bold;
+}
+.widget-curso__info {
+    font-weight: normal;
+}
+.widget-curso__label, .widget-curso__info {
+    font-size: 2rem;
+}
+/* Footer */
+footer {
+    background-color: var(--negro);
+    padding: 2rem;
 }
