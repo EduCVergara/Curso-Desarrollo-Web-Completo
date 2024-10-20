@@ -32,64 +32,51 @@
         </div>
     </header>
 <!-- Cuerpo del contenido -->
-    <div class="contenedor contenido-principal">
-        <main class="blog">
-            <h3>Nuestro Blog</h3>
+    <div class="contenedor">
+        <main class="contacto">
+            <h3 class="centrar-texto">Contacto</h3>
+            
+            
+            <div class="contacto-bg"></div>
 
-            <article class="entrada">
-                <div class="entrada__imagen">
-                    <img src="img/blog1.jpg" alt="imagen blog">
+            <form class="formulario">
+                
+                <div class="campo">
+                    <label class="campo__label" for="nombre">Nombre</label>
+                    <input
+                    class="campo__field" 
+                    type="text" 
+                    placeholder="Tu Nombre" 
+                    id="nombre">
+                </div>
+
+                <div class="campo">
+                    <label class="campo__label" for="email">E-mail</label>
+                    <input
+                    class="campo__field"
+                    type="email" 
+                    placeholder="Tu Email" 
+                    id="email">
                 </div>
                 
-                <div class="entrada__contenido">
-                    <h4>Tipos de Grano de Café</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit necessitatibus tempore itaque numquam quos beatae, expedita odio aliquam saepe fugiat?</p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                <div class="campo">
+                    <label class="campo__label" for="mensaje">Mensaje</label>
+                    <textarea 
+                    class="campo__field campo__field--textarea"
+                    name="texto" 
+                    id="mensaje" 
+                    placeholder="Escribe tu Mensaje aquí"></textarea>
                 </div>
-            </article>
 
-            <article class="entrada">
-                <div class="entrada__imagen">
-                    <img src="img/blog2.jpg" alt="imagen blog">
+                <div class="campo">
+                    <input type="submit" value="Enviar" class="boton boton--primario">
                 </div>
-                
-                <div class="entrada__contenido">
-                    <h4>3 Deliciosas Recetas de Café</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit necessitatibus tempore itaque numquam quos beatae, expedita odio aliquam saepe fugiat?</p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
-                </div>
-            </article>
+            </form>
+            
 
-            <article class="entrada">
-                <div class="entrada__imagen">
-                    <img src="img/blog3.jpg" alt="imagen blog">
-                </div>
-                
-                <div class="entrada__contenido">
-                    <h4>Beneficios del Café</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit necessitatibus tempore itaque numquam quos beatae, expedita odio aliquam saepe fugiat?</p>
-                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
-                </div>
-            </article>
+
         </main>
-        <aside class="sidebar">
-            <h3>Cursos y Talleres</h3>
-
-            <ul class="cursos no-padding">
-                <li class="widget-curso">
-                    <h4 class="no-margin">Técnicas de Extracción de Café</h4>
-                    <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
-                    <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
-                    <a href="entrada.html" class="boton boton--secundario">Más Información</a>
-                </li>
-                <li class="widget-curso">
-                    <h4 class="no-margin">4 Recetas de Café para principiantes</h4>
-                    <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
-                    <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
-                    <a href="entrada.html" class="boton boton--secundario">Más Información</a>
-                </li>
-            </ul>
-        </aside>
+        
     </div>
         <footer class="footer">
         <div class="contenedor">
