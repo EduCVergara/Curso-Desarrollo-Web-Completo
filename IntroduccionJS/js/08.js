@@ -6,3 +6,7 @@ console.log(email);
 
 //Concatenación:
 console.log('Nombre: ' +nombre+ '\nCorreo: ' +email);
+
+
+//Template Strings -- String Literals
+console.log(`Nombre: ${nombre}\nEmail: ${email}`);
