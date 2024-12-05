@@ -9,4 +9,4 @@ console.log('Nombre: ' +nombre+ '\nCorreo: ' +email);
 
 
 //Template Strings -- String Literals
-console.log(`Nombre: ${nombre}\nEmail: ${email}`);
+console.log(`Nombre: ${nombre}\nEmail: ${email}`); // '\n' es un salto de línea
