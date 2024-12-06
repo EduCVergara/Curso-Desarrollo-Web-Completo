@@ -28,7 +28,7 @@ console.log(resultado);
 
 resultado = carrito.some(function(producto) {
     return producto.nombre === 'Celular'
-})
+});
 
 //Reduce
 resultado = carrito.reduce(function(total, producto) {
