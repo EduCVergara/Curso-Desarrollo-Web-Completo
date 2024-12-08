@@ -46,5 +46,3 @@ resultado = carrito.filter(producto => producto.precio > 400); //Filtra por prec
 
 resultado = carrito.filter(producto => producto.nombre !== 'Celular'); //Filtra por productos que no sean Celulares
 console.log(resultado);
-
-
