@@ -12,3 +12,4 @@ if(Notification.permission == 'granted') {
         body: '¡La notificación ha funcionado!'
     })
 }
+
