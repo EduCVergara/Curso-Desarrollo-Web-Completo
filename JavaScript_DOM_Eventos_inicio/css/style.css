@@ -57,6 +57,12 @@ img {
 .centrar-texto {
     text-align: center;
 }
+.face-in {
+    opacity: 1;
+}
+.fade-out {
+    opacity: 0;
+}
 
 /** Header **/
 .webp .header {
@@ -234,6 +240,7 @@ img {
     padding: 1rem;
     color: var(--blanco);
     text-transform: uppercase;
+    transition: opacity 0.5s ease-in-out;
 }
 .correcto {
     background-color: rgb(74, 185, 0);
@@ -241,6 +248,7 @@ img {
     padding: 1rem;
     color: var(--blanco);
     text-transform: uppercase;
+    transition: opacity 0.5s ease-in-out;
 }
 .contacto-bg {
     background-image: url(../img/contacto.jpg);

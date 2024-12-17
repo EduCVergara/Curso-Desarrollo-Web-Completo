@@ -81,35 +81,72 @@ const datos = {
 const nombre = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
+const btnEnviar = document.querySelector('.boton--primario');
+const formulario = document.querySelector('.formulario');
 
 nombre.addEventListener('input', leerTexto);
 email.addEventListener('input', leerTexto);
 mensaje.addEventListener('input', leerTexto);
+// El evento Submit
+formulario.addEventListener('submit', (evento) => {
+    evento.preventDefault();
+
+    // Validando el Formulario (por el curso):
+    // Hacemos un destructuring al objeto Datos:
+    
+    const { nombre, email, mensaje } = datos;
+    
+    if (nombre === '' || email === '' || mensaje === '') {
+        mostrarAlerta('Todos los campos son obligatorios', true);
+
+        return // Return corta la ejecución del código.
+    }
+
+    mostrarAlerta('¡El formulario se ha enviado satisfactoriamente!');
+})
 
 function leerTexto(e) {
     datos[e.target.id] = e.target.value;
-    console.log(datos);
+    // console.log(datos);
 }
 
-// Validando el envío: *Extra - no estaba en el curso - Desafío*
-const btnEnviar = document.querySelector('.boton--primario');
+function mostrarAlerta(mensaje, error = null) {
+    const alerta = document.createElement('P');
+    alerta.textContent = mensaje;
 
-btnEnviar.addEventListener('click', function(){
-    const valNombre = datos.nombre;
-    const valEmail = datos.email;
-    const valMensaje = datos.mensaje;
-    if (valNombre == '') {
-        evento.preventDefault(); 
-        console.log('Debe agregar el nombre');
-    } else if (valEmail == ''){
-        evento.preventDefault();
-        console.log('Debe agregar el Email');
-    } else if (valMensaje == ''){
-        evento.preventDefault();
-        console.log('Debe agregar un Mensaje');
+    if (error) {
+        alerta.classList.add('error');
     } else {
-        //Validar un formulario para verificar que los campos estén llenos
-        evento.preventDefault();  //muy usado en formularios
-        console.log('Enviando Formulario');
+        alerta.classList.add('correcto');
     }
-});
+
+    formulario.appendChild(alerta);
+    setTimeout(()=> {
+        alerta.classList.add('fade-out'); //aplicar fade-out
+        setTimeout(()=> {
+            alerta.remove(); //eliminar elementro
+        }, 500)
+    }, 3000)
+}
+
+// Validando el envío (por mi cuenta): *Extra - no estaba en el curso - Desafío*
+
+// btnEnviar.addEventListener('click', function(evento){
+//     const valNombre = datos.nombre;
+//     const valEmail = datos.email;
+//     const valMensaje = datos.mensaje;
+//     if (valNombre == '') {
+//         evento.preventDefault();
+//         console.log('Debe agregar el nombre');
+//     } else if (valEmail == ''){
+//         evento.preventDefault();
+//         console.log('Debe agregar el Email');
+//     } else if (valMensaje == ''){
+//         evento.preventDefault();
+//         console.log('Debe agregar un Mensaje');
+//     } else {
+//         //Validar un formulario para verificar que los campos estén llenos
+//         evento.preventDefault();  //muy usado en formularios
+//         console.log('Enviando Formulario');
+//     }
+// });
