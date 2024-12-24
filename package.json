@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Aprendiendo SASS y NPM",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "sass": "sass --watch festivalmusica/src/scss:festivalmusica/build/css"
+    "sass": "sass --watch festivalmusica/src/scss:festivalmusica/build/css",
+    "dev": "gulp dev"
   },
   "keywords": [
     "SASS",
@@ -14,6 +16,8 @@
   "author": "Eduardo Constancio",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.0",
     "sass": "^1.83.0"
   }
 }

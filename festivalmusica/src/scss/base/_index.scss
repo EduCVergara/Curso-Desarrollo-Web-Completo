@@ -1,0 +1,3 @@
+@forward 'normalize'; //con 'as *' evitas tener que usar "variables.$fuente_principal" para acceder a la propiedad
+@forward 'variables';
+@forward 'globales'

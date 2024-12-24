@@ -1,0 +1,25 @@
+@use 'variables' as v;
+//480px hacia arriba
+@mixin telefono {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
+//768px hacia arriba
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+//1200px hacia arriba
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+//1400px hacia arriba
+@mixin desktopXL {
+    @media (min-width: v.$desktopXL) {
+        @content;
+    }
+}
