@@ -206,6 +206,9 @@ h1, h2, h3 {
     line-height: 2;
     text-align: center;
 }
+.servicio a {
+    line-height: 0;
+}
 .servicio .iconos {
     height: 15rem;
     width: 15rem;
