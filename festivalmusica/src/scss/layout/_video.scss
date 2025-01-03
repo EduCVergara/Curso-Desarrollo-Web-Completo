@@ -1,0 +1,61 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.video {
+    position: relative;
+    min-height: 50rem;
+    max-height: 70rem;
+    overflow: hidden;
+    .overlay {
+        position: absolute;
+        // height: 100px;
+        // width: 100px;
+        background: linear-gradient(
+            270deg,
+            rgba(v.$morado, 60%),
+            rgba(darken(v.$morado, 20%), 90%)
+        );
+        // al tener un elemento con posición absoluta, 
+        // le debes decir donde quieres dejarlo, en este caso 
+        // le decimos que en la posición derecha abajo sería:
+        inset: 0;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // bottom: 0; 
+        // al dejar todas las posiciones en 0, lo que hace 
+        // es llenar todo el espacio posible (el div en 
+        // este caso que es en donde está el elemento en el html)
+        // P.D.: no funcionará si está asignado un height o un width
+        // P.D.: fué reemplazado más adelante por "inset: 0;"
+        display: flex;
+        align-items: center;
+    }
+
+    video {
+        display: block;
+        width: auto;
+        @include m.desktop {
+            width: 100%;
+        }
+    }
+}
+
+.contenido-video {
+    z-index: 10;
+    h2 {
+        color: v.$blanco;   
+        font-size: 7rem;
+        margin: 0;                                                       
+    }
+
+    p {
+        color: v.$blanco;
+        background-color: v.$rosa;
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-weight: bold;
+        font-size: 2.4rem;
+        margin: 0;
+    }
+}
