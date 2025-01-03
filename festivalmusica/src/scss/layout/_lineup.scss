@@ -16,6 +16,20 @@
 .escenarios-contenedor {
     @include m.contenedor;
     @include m.tablet {
-        @include m.grid(2, 5rem);
+        @include m.grid(2);
     }
+}
+
+.escenario {
+    padding-top: 2rem;
+    .nombre-escenario {
+        font-size: 3rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+.calendario {
+    @include m.resetear-lista;
 }
