@@ -1,5 +1,6 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
+@use 'sass:color';
 
 .video {
     position: relative;
@@ -13,7 +14,7 @@
         background: linear-gradient(
             270deg,
             rgba(v.$morado, 60%),
-            rgba(darken(v.$morado, 20%), 90%)
+            color.adjust(v.$morado, $lightness: -20%)
         );
         // al tener un elemento con posición absoluta, 
         // le debes decir donde quieres dejarlo, en este caso 
