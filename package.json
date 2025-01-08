@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "sass": "sass --watch festivalmusica/src/scss:festivalmusica/build/css",
-    "dev": "gulp dev"
+    "dev": "gulp"
   },
   "keywords": [
     "SASS",

@@ -1,9 +1,25 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
+@use 'layout/galeria' as g;
 
 .header {
     background-color: v.$verde;
+    @include m.tablet {
+        &.fixed {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            box-shadow: .1rem .2rem 2rem #333;
+            animation: fadeIn ease-in .3s;
+        }
+        &.fade-out {
+            animation: fadeOut ease-in .3s;
+        }
+    }
 
+    
+    
     .contenido-header {
         padding: 2rem;
         @include m.tablet {
