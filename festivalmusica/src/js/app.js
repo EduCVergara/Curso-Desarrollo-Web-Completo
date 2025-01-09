@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     navegacionFija()
     crearGaleria()
+    resaltarEnlace()
+    scrollNav()
 })
 
 function navegacionFija() {
@@ -73,4 +75,40 @@ function cerrarModal() {
         body.classList.remove('overflow-hidden')
         modal?.remove();
     }, {once: true});
+}
+function resaltarEnlace() {
+    document.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('section')
+        const navLinks = document.querySelectorAll('.navegacion-principal a')
+
+        let actual = ''
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop
+            const sectionHeight = section.clientHeight
+            if (window.scrollY >= (sectionTop - sectionHeight / 3)) {
+                actual = section.id
+            }
+
+        })
+
+        navLinks.forEach(link => {
+            link.classList.remove('active')
+            if(link.getAttribute('href') === '#' + actual) {
+                link.classList.add('active')
+            }
+        })
+    })
+}
+function scrollNav() {
+    const navLinks = document.querySelectorAll('.navegacion-principal a')
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault()
+            const sectionScroll = e.target.getAttribute('href')
+            const section = document.querySelector(sectionScroll)
+
+            section.scrollIntoView({behavior: 'smooth'})
+        })
+    })
 }

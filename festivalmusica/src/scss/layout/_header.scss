@@ -52,7 +52,8 @@
         color: v.$blanco;
         font-size: 2.4rem;
         transition: .3s, transform .3s;
-        &:hover {
+        &:hover,
+        &.active {
             color: v.$amarillo;
             transform: scale(1.1);
             font-weight: 600;
