@@ -159,13 +159,13 @@
         <section>
             <h2>Contacto</h2>
             <!-- formulario de contacto -->
-            <form class="formulario">
+            <form class="formulario" name="contacto" method="POST" data-netlify="true">
                 <fieldset>
                     <legend>Contáctame llenando todos los campos</legend>
                     <div class="contenedor-campos"> <!-- contenedor de campos -->
                         <div class="campo">
                             <label for="name">Nombre</label>
-                            <input class="input-text" type="text" placeholder="Nombre" id="name"
+                            <input class="input-text" type="text" placeholder="Nombre" id="name" name="name"
                                 autocomplete="given-name">
                         </div>
 
@@ -177,7 +177,7 @@
 
                         <div class="campo">
                             <label for="mail">E-Mail</label>
-                            <input class="input-text" id="mail" type="email" placeholder="Correo Electrónico"
+                            <input class="input-text" id="mail" name="email" type="email" placeholder="Correo Electrónico"
                                 autocomplete="email">
                         </div>
 
