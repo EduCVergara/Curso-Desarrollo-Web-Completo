@@ -25,7 +25,10 @@ function crearGaleria() {
 
     for(let conteoImagen = 1; conteoImagen <= CANT_IMAGENES; conteoImagen++) {
         const imagen = document.createElement('IMG')
-        imagen.src = `src/img/gallery/full/${conteoImagen}.jpg`
+        imagen.loading = 'lazy'
+        imagen.width = '300'
+        imagen.height = '200'
+        imagen.src = `src/img/gallery/thumb/${conteoImagen}.jpg`
         imagen.alt = 'Imagen Galería'
 
         //Event Handler (evento para repsonder a una acción de un usuario, en este caso, un click)
