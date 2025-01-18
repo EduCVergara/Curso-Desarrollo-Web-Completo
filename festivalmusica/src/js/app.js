@@ -20,18 +20,18 @@ function navegacionFija() {
 }
 
 function crearGaleria() {
+    
     const CANT_IMAGENES = 16
     const galeria = document.querySelector('.galeria-imagenes')
 
     for(let conteoImagen = 1; conteoImagen <= CANT_IMAGENES; conteoImagen++) {
-        const imagen = document.createElement('IMG')
-        imagen.loading = 'lazy'
-        imagen.width = '300'
-        imagen.height = '200'
-        imagen.src = `src/img/gallery/thumb/${conteoImagen}.jpg`
-        imagen.alt = 'Imagen Galería'
-
-        //Event Handler (evento para repsonder a una acción de un usuario, en este caso, un click)
+        const imagen = document.createElement('PICTURE')
+        imagen.innerHTML = `
+            <source srcset="build/img/gallery/thumb/${conteoImagen}.avif" type="image/avif">
+            <source srcset="build/img/gallery/thumb/${conteoImagen}.webp" type="image/webp">
+            <img loading="lazy" width="200" height="300" src="build/img/gallery/thumb/${conteoImagen}.jpg" alt="imagen galeria">
+        `;
+        //Event Handler (evento para responder a una acción de un usuario, en este caso, un click)
         imagen.onclick = function() {
             mostrarImagen(conteoImagen)
         }
@@ -41,9 +41,12 @@ function crearGaleria() {
 }
 
 function mostrarImagen(indice) {
-    const imagen = document.createElement('IMG')
-    imagen.src = `src/img/gallery/full/${indice}.jpg`
-    imagen.alt = 'Imagen Galería'
+    const imagen = document.createElement('PICTURE')
+    imagen.innerHTML = `
+            <source srcset="build/img/gallery/full/${indice}.avif" type="image/avif">
+            <source srcset="build/img/gallery/full/${indice}.webp" type="image/webp">
+            <img loading="lazy" width="200" height="300" src="build/img/gallery/full/${indice}.jpg" alt="imagen galeria">
+        `;
     
     //generar modal
     const modal = document.createElement('DIV')
